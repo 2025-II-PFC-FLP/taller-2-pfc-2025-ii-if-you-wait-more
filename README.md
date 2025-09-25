@@ -1,18 +1,18 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/lEw1Qm1j)
 # Asignación: [Nombre de la asignación]
 
-**Fecha:** [DD/MM/AAAA]
+**Fecha:** [25/09/2024]
 **Curso:** [Nombre del Curso]
 
 ---
 
 ## 👥 Integrantes del Grupo
 
-| Nombre Completo              | Código | Rol            | Correo Electrónico        |
-|------------------------------|  | -------------- | ------------------------- |
-| [Juan Esteban Perez Ramirez] | 202459486 | [Líder] | [juan.perez.ramirez@correounivalle.edu.co] |
-| [Estudiante 2]               | 123457 | [Colaborador]  | [correo2@institucion.edu] |
-| [Estudiante 3]               | 123458 | [Colaborador]  | [correo3@institucion.edu] |
+| Nombre Completo              | Código | Rol             | Correo Electrónico                         |
+|------------------------------|  ------|-----------------| ------------------------------------------ |
+| [Juan Esteban Perez Ramirez] | 202459486 | [Líder]         | [juan.perez.ramirez@correounivalle.edu.co] |
+| [Estudiante 2]               | 123457 | [Colaborador]   | [correo2@institucion.edu]                  |
+| [Estudiante 3]               | 123458 | [Colaborador]   | [correo3@institucion.edu]                  |
 
 ---
 
