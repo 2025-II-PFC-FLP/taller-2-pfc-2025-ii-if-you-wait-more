@@ -8,11 +8,11 @@
 
 ## 👥 Integrantes del Grupo
 
-| Nombre Completo              | Código | Rol             | Correo Electrónico                         |
-|------------------------------|  ------|-----------------| ------------------------------------------ |
-| [Juan Esteban Perez Ramirez] | 202459486 | [Líder]         | [juan.perez.ramirez@correounivalle.edu.co] |
-| [Estudiante 2]               | 123457 | [Colaborador]   | [correo2@institucion.edu]                  |
-| [Estudiante 3]               | 123458 | [Colaborador]   | [correo3@institucion.edu]                  |
+| Nombre Completo               | Código    | Rol             | Correo Electrónico                         |
+|-------------------------------|-----------|-----------------|--------------------------------------------|
+| [Juan Esteban Perez Ramirez]  | 202459486 | [Líder]         | [juan.perez.ramirez@correounivalle.edu.co] |
+| [Marlen Lizeth Estrada López] | 202359494 | [Colaborador]   | [marlen.estrada@correounivalle.edu.co]     |
+| [Estudiante 3]                | 123458    | [Colaborador]   | [correo3@institucion.edu]                  |
 
 ---
 
