@@ -20,3 +20,15 @@
 
 [Breve párrafo explicando el propósito y objetivos del taller (4-6 líneas). Ejemplo:]
 _"Este taller busca analizar [tema principal] mediante [metodología]. Los objetivos incluyen [objetivo 1], [objetivo 2] y [objetivo 3], aplicando conceptos vistos en clase como [concepto relevante]."_
+
+## comandos de git
+cada linea es un enter diferente
+```bash
+# actualizar el repositorio local
+git pull origin master
+
+# hacer commit
+git add .
+git commit -m "mensaje descriptivo"
+git push origin master
+```
