@@ -28,7 +28,7 @@ cada linea es un enter diferente
 git pull origin master
 
 # hacer commit
-git add .
+git add . #cambiar el punto por el archivo que se quiera subir
 git commit -m "mensaje descriptivo"
 git push origin master
 ```
