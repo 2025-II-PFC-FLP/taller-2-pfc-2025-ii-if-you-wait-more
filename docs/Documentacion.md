@@ -1,4 +1,9 @@
 grande
 $$
-\frac{a}{b}
+fs(x)=(\frac{n}{n+b})^e
+$$
+
+complemento
+$$
+1-fs(x)
 $$

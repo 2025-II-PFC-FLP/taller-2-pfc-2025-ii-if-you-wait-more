@@ -10,17 +10,16 @@ class ConjuntosDifusos {
     s(elem)
   }
 
-  // Conjunto difuso de números grandes
+  // Conjunto difuso de números grandes juan
   def grande(d: Int, e: Int): ConjDifuso = {
-    // Implementación pendiente
-    (x: Int) => {
-      if (x <= d) 0.0
-      else if (x >= e) 1.0
-      else (x - d).toDouble / (e - d)
+    (n: Int) => {
+      val frac = n.toDouble / (n + d).toDouble
+      math.pow(frac, e.toDouble)
     }
   }
 
-  // Complemento de un conjunto difuso
+
+  // Complemento de un conjunto difuso juan
   def complemento(c: ConjDifuso): ConjDifuso = {
     (x: Int) => 1.0 - c(x)
   }

@@ -2,14 +2,14 @@ package taller
 
 import org.scalatest.funsuite.AnyFunSuite
 
-class Test extends AnyFunSuite {
+class ConjuntosDifusosTest extends AnyFunSuite {
 
   val cd = new ConjuntosDifusos()
 
   test("prueba de grande") {
     val g = cd.grande(2, 3)
     assert(g(1) >= 0.0 && g(1) <= 1.0)
-    assert(g(100) > g(5))   // un número más grande debe tener más pertenencia
+    assert(g(100) > g(5))
   }
 
   test("prueba de complemento") {
