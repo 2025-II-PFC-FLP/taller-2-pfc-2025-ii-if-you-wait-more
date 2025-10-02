@@ -30,13 +30,20 @@ class ConjuntosDifusos {
   // Intersección de dos conjuntos difusos
   //def interseccion(cd1: ConjDifuso, cd2: ConjDifuso): ConjDifuso = {}
 
-  // Inclusión (usar recursión de cola, intervalo [0,1000])
-  def inclusion(cd1: ConjDifuso, cd2: ConjDifuso): Boolean = {
-    true
-  }
+    // Inclusión (usar recursión de cola, intervalo [0,1000])
+    def inclusion(cd1: ConjDifuso, cd2: ConjDifuso): Boolean = {
+      def inclusionAux(elem: Int): Boolean = {
+        if (elem > 1000) true
+        else if (cd1(elem) <= cd2(elem)) inclusionAux(elem + 1)
+        else false
+      }
+      inclusionAux(0)
+    }
 
-  // Igualdad de conjuntos difusos
-  def igualdad(cd1: ConjDifuso, cd2: ConjDifuso): Boolean = {
-true
-  }
+    // Igualdad de conjuntos difusos
+    def igualdad(cd1: ConjDifuso, cd2: ConjDifuso): Boolean = {
+      inclusion(cd1, cd2) && inclusion(cd2, cd1)
+    }
+
+
 }

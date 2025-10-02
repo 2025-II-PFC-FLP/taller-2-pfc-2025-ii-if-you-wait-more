@@ -57,3 +57,74 @@ flowchart TD
     D --> E[Retornar resultado]
 
 ```
+
+
+
+# Documentación de las funciones `inclusion` e `igualdad`
+
+## Función `inclusion`
+
+### Definición matemática
+
+Dados dos conjuntos difusos $S_1$ y $S_2$ definidos sobre el mismo universo $U$, se dice que $S_1$ está incluido en $S_2$ (denotado $S_1 \subseteq S_2$) si y solo si:
+
+$$
+\forall x \in U : f_{S_1}(x) \leq f_{S_2}(x)
+$$
+
+En nuestra implementación, limitamos el universo al intervalo de enteros $[0, 1000]$ para hacer computable la verificación.
+
+### Implementación recursiva de cola
+
+La función utiliza recursión de cola para verificar la inclusión elemento por elemento:
+
+```scala
+def inclusion(cd1: ConjDifuso, cd2: ConjDifuso): Boolean = {
+  def inclusionAux(elem: Int): Boolean = {
+    if (elem > 1000) true
+    else if (cd1(elem) <= cd2(elem)) inclusionAux(elem + 1)
+    else false
+  }
+  inclusionAux(0)
+}
+```
+
+```mermaid
+flowchart TD
+    A[Inicio inclusion] --> B[Llamar inclusionAux 0 ]
+    B --> C{elem > 1000?}
+    C -->|No| D{cd1 elem  <= cd2 elem ?}
+    D -->|Sí| E[Llamar inclusionAux elem+1 ]
+    D -->|No| F[Retornar false]
+    E --> C
+    C -->|Sí| G[Retornar true]
+
+```
+---
+## Función `igualdad`
+### Definición matemática
+Dos conjuntos difusos $S_1$ y $S_2$ son iguales (denotado $S_1 = S_2$) si y solo si:
+$$
+\forall x \in U : f_{S_1}(x) = f_{S_2}(x)
+$$
+### Implementación recursiva de cola
+La función utiliza recursión de cola para verificar la igualdad elemento por elemento:
+```scala
+def igualdad(cd1: ConjDifuso, cd2: ConjDifuso): Boolean = {
+  def igualdadAux(elem: Int): Boolean = {
+    if (elem > 1000) true
+    else if (cd1(elem) == cd2(elem)) igualdadAux(elem + 1)
+    else false
+  } 
+    igualdadAux(0)
+}
+```
+```mermaid
+flowchart TD
+    A[Inicio igualdad] --> B[Llamar inclusion cd1, cd2]
+    B --> C{¿cd1 ⊆ cd2?}
+    C -->|No| D[Retornar false]
+    C -->|Sí| E[Llamar inclusion cd2, cd1]
+    E --> F{¿cd2 ⊆ cd1?}
+    F -->|No| D
+    F -->|Sí| G[Retornar true]
