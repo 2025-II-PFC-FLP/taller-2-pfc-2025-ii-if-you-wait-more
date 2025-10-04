@@ -31,4 +31,12 @@ test("prueba de igualdad") {
     val g2 = cd.grande(2, 3) // igual a g1
     assert(cd.igualdad(g1, g2)) // g1 == g2
   }
+  test("prueba de unión e intersección") {
+    val g1 = cd.grande(2, 3)
+    val g2 = cd.grande(2, 2)
+    val u = cd.union(g1, g2)
+    val i = cd.interseccion(g1, g2)
+    assert(u(10) >= math.max(g1(10), g2(10)) - 1e-6) //g1 ∪ g2
+    assert(i(10) <= math.min(g1(10), g2(10)) + 1e-6) //g1 ∩ g2
+  }
 }
