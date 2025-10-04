@@ -1,12 +1,12 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/lEw1Qm1j)
-# Asignación: [Nombre de la asignación]
+# Asignación: [taller-2]
 
-**Fecha:** [25/09/2024]
-**Curso:** [Nombre del Curso]
+**Fecha:** [05/10/2024]
+**Curso:** [PFC]
 
 ---
 
-## 👥 Integrantes del Grupo
+## 👥 Integrantes del super Grupo
 
 | Nombre Completo                  | Código    | Rol             | Correo Electrónico                         |
 |----------------------------------|-----------|-----------------|--------------------------------------------|
@@ -18,11 +18,9 @@
 
 ## 📌 Descripción de la Asignación
 
-[Breve párrafo explicando el propósito y objetivos del taller (4-6 líneas). Ejemplo:]
-_"Este taller busca analizar [tema principal] mediante [metodología]. Los objetivos incluyen [objetivo 1], [objetivo 2] y [objetivo 3], aplicando conceptos vistos en clase como [concepto relevante]."_
-
+En esta asignación, hemos implementado las operaciones de unión e intersección de conjuntos difusos utilizando el lenguaje de programación Scala. Estas operaciones son fundamentales en la teoría de conjuntos difusos.
 ## comandos de git
-cada linea es un enter diferente
+cada linea es un enter diferente muchachos
 ```bash
 # actualizar el repositorio local
 git pull origin master

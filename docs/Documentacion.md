@@ -13,8 +13,31 @@ f_{\text{grande}}(n) = \left(\frac{n}{n + d}\right)^e
 $$
 
 donde:
-- $$d \geq 1 $$controla el desplazamiento (entre más grande sea \(d\), más difícil es que \(n\) sea considerado grande).
-- $$ e > 1 $$ controla la nitidez (entre más grande sea e, más brusca es la transición entre 0 y 1).
+- $d \geq 1 $controla el desplazamiento (entre más grande sea \(d\), más difícil es que \(n\) sea considerado grande).
+- $ e > 1 $ controla la nitidez (entre más grande sea e, más brusca es la transición entre 0 y 1).
+### Implementación
+La función `grande` se implementa en Scala como una función que retorna otra función (un conjunto difuso):
+```scala
+  def grande(d: Int, e: Int): ConjDifuso = {
+    (n: Int) => {
+      val frac = n.toDouble / (n + d).toDouble
+      math.pow(frac, e.toDouble)
+    }
+  }
+```
+- ## Pila de llamados
+
+Aunque estas funciones no son recursivas, se puede ilustrar la pila de llamados de manera conceptual:
+
+```mermaid
+flowchart TD
+    
+    A[Inicio grande] --> B[Calcular frac = n dividido entre n + d]
+    B --> C[Elevar frac a la potencia e]
+    C --> D[Retornar resultado]
+
+
+```
 
 ---
 
@@ -29,26 +52,21 @@ f_{\neg S}(x) = 1 - f_S(x)
 $$
 
 Esto significa que:
-- Si $$ f_S(x) $$ es cercano a 1 (alta pertenencia), entonces $$f_{\neg S}(x)$$será cercano a 0.
-- Si $$ f_S(x) $$ es cercano a 0 (baja pertenencia), entonces $$f_{\neg S}(x)$$ será cercano a 1.
+- Si $ f_S(x) $ es cercano a 1 (alta pertenencia), entonces $f_{\neg S}(x)$será cercano a 0.
+- Si $ f_S(x) $ es cercano a 0 (baja pertenencia), entonces $f_{\neg S}(x)$ será cercano a 1.
 
-
+### Implementación
+La función `complemento` se implementa en Scala como una función que toma un conjunto difuso y retorna su complemento(si es 1 es 0, si es 0 es 1, si es 0.5 es 0.5, etc.):
+```scala
+  def complemento(c: ConjDifuso): ConjDifuso = {
+  (x: Int) => 1.0 - c(x)
+}
+```
 
 ---
 
-## Pila de llamados
-
-Aunque estas funciones no son recursivas, se puede ilustrar la pila de llamados de manera conceptual:
-
-```mermaid
-flowchart TD
-    
-    A[Inicio grande] --> B[Calcular frac = n dividido entre n + d]
-    B --> C[Elevar frac a la potencia e]
-    C --> D[Retornar resultado]
-
-
-```
+- ## Pila de llamados
+no me deja poner (x) en el diagrama de flujo, por eso puse -x- en vez de (x)
 ```mermaid
 flowchart TD
     A[Inicio complemento] --> B[Evaluar c -x-]

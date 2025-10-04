@@ -12,7 +12,7 @@ class ConjuntosDifusos {
     s(elem)
   }
 
-  // Conjunto difuso de números grandes juan
+  // juan
   def grande(d: Int, e: Int): ConjDifuso = {
     (n: Int) => {
       val frac = n.toDouble / (n + d).toDouble
@@ -36,7 +36,6 @@ class ConjuntosDifusos {
     (x: Int) => math.min(cd1(x), cd2(x))
   }
 
-    // Inclusión (usar recursión de cola, intervalo [0,1000])
     def inclusion(cd1: ConjDifuso, cd2: ConjDifuso): Boolean = {
       @tailrec
       def inclusionAux(elem: Int): Boolean = {
