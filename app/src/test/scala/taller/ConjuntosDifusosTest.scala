@@ -43,7 +43,7 @@ class ConjuntosDifusosTest extends AnyFunSuite {
     assert(math.abs(g(100) - esperado) < 1e-6)
   }
 
-//fin de pruebas de la función grande
+  //fin de pruebas de la función grande
 
   //pruebas de la función complemento
   test("prueba de complemento") {
@@ -84,18 +84,72 @@ class ConjuntosDifusosTest extends AnyFunSuite {
     val esperado = 1.0 - (100.0 / 103.0) // ≈ 0.02913
     assert(math.abs(c(100) - esperado) < 1e-6)
   }
-//fin de pruebas de complemento
+  //fin de pruebas de complemento
 
   test("prueba de inclusión") {
     val g1 = cd.grande(2, 3)
-    val g2 = cd.grande(2, 2) // g2 incluye a g1
-    assert(cd.inclusion(g1, g2)) // g1 ⊆ g2
+    val g2 = cd.grande(2, 2)
+    assert(cd.inclusion(g1, g2))
   }
-test("prueba de igualdad") {
+  test("inclusión ") {
+    val g1 = cd.grande(1, 4)
+    val g2 = cd.grande(1, 2)
+    assert(cd.inclusion(g1, g2))
+  }
+
+  test("inclusión ") {
+    val g1 = cd.grande(2, 5)
+    val g2 = cd.grande(2, 3)
+    assert(cd.inclusion(g1, g2))
+  }
+
+  test("inclusión ") {
+    val g1 = cd.grande(3, 4)
+    val g2 = cd.grande(3, 2)
+    assert(cd.inclusion(g1, g2))
+  }
+
+  test("inclusión ") {
+    val g1 = cd.grande(1, 6)
+    val g2 = cd.grande(1, 3)
+    assert(cd.inclusion(g1, g2))
+  }
+
+  test("prueba de igualdad") {
     val g1 = cd.grande(2, 3)
-    val g2 = cd.grande(2, 3) // igual a g1
-    assert(cd.igualdad(g1, g2)) // g1 == g2
+    val g2 = cd.grande(2, 3)
+    assert(cd.igualdad(g1, g2))
   }
+  test("igualdad") {
+    val g1 = cd.grande(0, 5)
+    val g2 = cd.grande(0, 5)
+    assert(cd.igualdad(g1, g2))
+  }
+
+  test("igualdad") {
+    val g1 = cd.grande(2, 6)
+    val g2 = cd.grande(2, 6)
+    assert(cd.igualdad(g1, g2))
+  }
+
+  test("igualdad") {
+    val g1 = cd.grande(4, 8)
+    val g2 = cd.grande(4, 8)
+    assert(cd.igualdad(g1, g2))
+  }
+
+  test("igualdad") {
+    val g1 = cd.grande(1, 9)
+    val g2 = cd.grande(1, 9)
+    assert(cd.igualdad(g1, g2))
+  }
+
+  test("igualdad") {
+    val g1 = cd.grande(5, 10)
+    val g2 = cd.grande(5, 10)
+    assert(cd.igualdad(g1, g2))
+  }
+
 
   //pruebas de las funciones unión e intersección
   test("prueba de unión e intersección en x=2") {
