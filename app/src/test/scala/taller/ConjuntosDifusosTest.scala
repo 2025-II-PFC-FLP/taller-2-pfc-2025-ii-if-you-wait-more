@@ -91,25 +91,25 @@ class ConjuntosDifusosTest extends AnyFunSuite {
     val g2 = cd.grande(2, 2)
     assert(cd.inclusion(g1, g2))
   }
-  test("inclusión ") {
+  test("inclusión asdasd") {
     val g1 = cd.grande(1, 4)
     val g2 = cd.grande(1, 2)
     assert(cd.inclusion(g1, g2))
   }
 
-  test("inclusión ") {
+  test("inclusión ads") {
     val g1 = cd.grande(2, 5)
     val g2 = cd.grande(2, 3)
     assert(cd.inclusion(g1, g2))
   }
 
-  test("inclusión ") {
+  test("inclusión awd") {
     val g1 = cd.grande(3, 4)
     val g2 = cd.grande(3, 2)
     assert(cd.inclusion(g1, g2))
   }
 
-  test("inclusión ") {
+  test("inclusiónqew ") {
     val g1 = cd.grande(1, 6)
     val g2 = cd.grande(1, 3)
     assert(cd.inclusion(g1, g2))
@@ -120,33 +120,25 @@ class ConjuntosDifusosTest extends AnyFunSuite {
     val g2 = cd.grande(2, 3)
     assert(cd.igualdad(g1, g2))
   }
-  test("igualdad") {
-    val g1 = cd.grande(0, 5)
-    val g2 = cd.grande(0, 5)
+
+  test("igualdad asd") {
+    val g1 = cd.grande(1, 4)
+    val g2 = cd.grande(1, 4)
     assert(cd.igualdad(g1, g2))
   }
-
-  test("igualdad") {
-    val g1 = cd.grande(2, 6)
-    val g2 = cd.grande(2, 6)
+  test("igualdad qwe") {
+    val g1 = cd.grande(3, 2)
+    val g2 = cd.grande(3, 2)
     assert(cd.igualdad(g1, g2))
   }
-
-  test("igualdad") {
-    val g1 = cd.grande(4, 8)
-    val g2 = cd.grande(4, 8)
+  test("igualdad zxc") {
+    val g1 = cd.grande(5, 1)
+    val g2 = cd.grande(5, 1)
     assert(cd.igualdad(g1, g2))
   }
-
-  test("igualdad") {
-    val g1 = cd.grande(1, 9)
-    val g2 = cd.grande(1, 9)
-    assert(cd.igualdad(g1, g2))
-  }
-
-  test("igualdad") {
-    val g1 = cd.grande(5, 10)
-    val g2 = cd.grande(5, 10)
+  test("igualdad rty") {
+    val g1 = cd.grande(4, 3)
+    val g2 = cd.grande(4, 3)
     assert(cd.igualdad(g1, g2))
   }
 
