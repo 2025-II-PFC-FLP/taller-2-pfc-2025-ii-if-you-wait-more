@@ -96,12 +96,56 @@ test("prueba de igualdad") {
     val g2 = cd.grande(2, 3) // igual a g1
     assert(cd.igualdad(g1, g2)) // g1 == g2
   }
-  test("prueba de unión e intersección") {
+
+  //pruebas de las funciones unión e intersección
+  test("prueba de unión e intersección en x=2") {
     val g1 = cd.grande(2, 3)
     val g2 = cd.grande(2, 2)
     val u = cd.union(g1, g2)
     val i = cd.interseccion(g1, g2)
-    assert(u(10) >= math.max(g1(10), g2(10)) - 1e-6) //g1 ∪ g2
-    assert(i(10) <= math.min(g1(10), g2(10)) + 1e-6) //g1 ∩ g2
+    val esperadoU = math.max(g1(2), g2(2))
+    val esperadoI = math.min(g1(2), g2(2))
+    assert(math.abs(u(2) - esperadoU) < 1e-6) //g1 ∪ g2
+    assert(math.abs(i(2) - esperadoI) < 1e-6) //g1 ∩ g2
+  }
+  test("prueba de unión e intersección en x=5") {
+    val g1 = cd.grande(1, 2)
+    val g2 = cd.grande(2, 3)
+    val u = cd.union(g1, g2)
+    val i = cd.interseccion(g1, g2)
+    val esperadoU = math.max(g1(5), g2(5))
+    val esperadoI = math.min(g1(5), g2(5))
+    assert(math.abs(u(5) - esperadoU) < 1e-6) //g1 ∪ g2
+    assert(math.abs(i(5) - esperadoI) < 1e-6) //g1 ∩ g2
+  }
+  test("prueba de unión e intersección en x=10") {
+    val g1 = cd.grande(3, 1)
+    val g2 = cd.grande(5, 4)
+    val u = cd.union(g1, g2)
+    val i = cd.interseccion(g1, g2)
+    val esperadoU = math.max(g1(10), g2(10))
+    val esperadoI = math.min(g1(10), g2(10))
+    assert(math.abs(u(10) - esperadoU) < 1e-6) //g1 ∪ g2
+    assert(math.abs(i(10) - esperadoI) < 1e-6) //g1 ∩ g2
+  }
+  test("prueba de unión e intersección en x=15"){
+    val g1 = cd.grande(2, 2)
+    val g2 = cd.grande(4, 3)
+    val u = cd.union(g1, g2)
+    val i = cd.interseccion(g1, g2)
+    val esperadoU = math.max(g1(15), g2(15))
+    val esperadoI = math.min(g1(15), g2(15))
+    assert(math.abs(u(15) - esperadoU) < 1e-6) //g1 ∪ g2
+    assert(math.abs(i(15) - esperadoI) < 1e-6) //g1 ∩ g2
+  }
+  test("prueba de unión e intersección en x=50"){
+    val g1 = cd.grande(1, 3)
+    val g2 = cd.grande(3, 2)
+    val u = cd.union(g1, g2)
+    val i = cd.interseccion(g1, g2)
+    val esperadoU = math.max(g1(50), g2(50))
+    val esperadoI = math.min(g1(50), g2(50))
+    assert(math.abs(u(50) - esperadoU) < 1e-6) //g1 ∪ g2
+    assert(math.abs(i(50) - esperadoI) < 1e-6) //g1 ∩ g2
   }
 }
